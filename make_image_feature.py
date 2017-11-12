@@ -52,7 +52,7 @@ def make_fixed_image_feature_in_dir(dir, size, save_img_dir, feature_file_name, 
 
     feature_list = np.array(feature_list)
     location_list = np.array(location_list)
-    print(feature_list.size)
+
     np.save(feature_file_name, feature_list)
     np.save(location_file_name, location_list)
 
@@ -61,6 +61,6 @@ if __name__ == '__main__':
     dir = 'data/view'
     save_img_dir = 'data/resized_view'
     feature_file_name = 'data/view_feature/view_feature.npy'
-    location_file_name = 'data/view_location/location_feature.npy'
+    location_file_name = 'data/view_location/view_location.npy'
     size = (256, 256)
     make_fixed_image_feature_in_dir(dir, size, save_img_dir, feature_file_name, location_file_name)
